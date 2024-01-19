@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Page with Three Sections</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0); /* Dark background color for the navigation bar */
+            overflow: hidden;
+            position: fixed;
+            top: 5px;
+            flex-direction: column;
+            width: auto;
+            margin-left: 10px;
+            padding-left: 20px;
+            text-align: center;
+            /* border-radius: 10%; */
+        }
+
+        nav a {
+            display: list-item;
+            color: white;
+            text-align: center;
+            margin: 10px ;
+            text-decoration: solid;
+        }
+
+        /* Change color on hover */
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* img {
+            border-radius: 50%;
+        } */
+
+        /* First Section with Background Image */
+        .section1 {
+            height: 100vh;
+            background-image: url('header-background.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Second Section with Dark Blue Color */
+        .section2 {
+            /* height: 100vh; */
+            background-color: #001f3f; /* Dark blue color */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+            height: auto;
+        }
+
+        .text-container {
+            max-width: 800px; /* Set a maximum width for the text container */
+             /* Allow the text container to expand vertically */
+        }
+
+        .top-right-section {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+            border-radius: 5px;
+            color: black;
+        }
+
+        /* Two Side-by-Side Sections in the Second Section */
+        .side-section {
+            flex: 1;
+            padding-left: 40px;
+        }
+
+        /* Third Section with Plain Background */
+        .section3 {
+            height: 100vh;
+            background-color: #413e2a; /* Light gray color */
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            height: auto;
+        }
+
+        .details-container{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .icon {
+            display: flex;
+            background-color: rgb(0, 0, 0, 0);
+            flex-direction: row;
+            /* align-items: center; */
+            justify-content: center;
+            margin: 10px;
+        }
+        .image{
+            border-radius: 50%;
+        }
+        .image-padding{
+            margin-left: 5%;
+        }
+        .paragraph{
+            width: 60%;
+            justify-content: center;
+            vertical-align: auto;
+        }
+        .icon-pace {
+            padding: 10%;
+        }
+        .big-icon-pace {
+            padding: 5%;
+        }
+        .small-icons {
+            width: 5px;
+            height: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#section1">Home</a>
+        <a href="#section2">Projects</a>
+        <a href="#section3">Contact</a>
+    </nav>
+
+    <div class="section1" id="section1">
+        <!-- <div class="top-right-section">
+            <h2>Contact Details</h2>
+            <a href="https://www.linkedin.com/in/zenzele-hlubi-185a92232/">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-512x512-cvyrro5n.png" alt="LinkedIn icon" width="10px" height="10px">
+            </a>
+        </div> -->
+        <img src="./Project Pictures/IMG_6693.JPG" alt="zenzele" width="15%" height="20%" class="image">
+        <h1>
+            Zenzele Sethembile Martin Hlubi
+        </h1>
+        <p style="color: rgb(0, 0, 0); font-family: "Open Sans", Arial, sans-serif; text-align: justify;">
+            I am a Computer Science graduate with a Bachelor of Science degree from the University of Witwatersrand, 
+            where I proudly graduated in 2023. My journey in the field of computer science has been an exhilarating exploration of the ever-evolving landscape of technology. 
+            My curiosity extends to emerging fields such as artificial intelligence and machine learning, where I see immense potential for positive societal impact.
+            <br>
+            <br>
+            During my time at university, I immersed myself in a diverse range of courses, 
+            from algorithm design to software development, 
+            gaining a solid foundation in both theoretical concepts and practical applications. 
+            In addition to my technical skills, I believe in the power of effective communication and collaboration. 
+            I have honed my ability to convey complex technical concepts in a clear and accessible manner, 
+            fostering an environment where diverse perspectives contribute to innovative solutions.
+            <br>
+            <br>
+            Now, as I embark on the next chapter of my professional journey, 
+            I am eager to apply my skills and knowledge to address challenges and contribute meaningfully to the ever-evolving world of technology. 
+            Whether it's developing robust software solutions, exploring the realms of artificial intelligence, 
+            or contributing to groundbreaking projects, 
+            I am excited about the possibilities that lie ahead and the opportunity to make a lasting impact in the field of computer science.
+        </p>
+    </div>
+
+    <!-- Second Section -->
+    <div class="section2" id="section2">
+        <h1>Projects</h1>
+        <h2>Student Survey and Support App</h2>
+        <div class="icon">
+            <div class="icon-pace">
+                <img src="https://pagepro.co/blog/wp-content/webp-express/webp-images/uploads/2020/03/react-native-logo-259x300.png.webp" alt="React native" width="70px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/logo-javascript-logo-black-and-white.png" alt="JavaScript" width="70px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png" alt="CSS" width="70px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" alt="Docker" width="70px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="GitHub" width="100px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                The application served as a survey and support tool designed to facilitate the administration of school-relevant surveys and enhance the lecturer's ability to assess students' understanding of course content. 
+                Two teams collaborated on the development of this application, 
+                with my team specifically assigned to the creation of the checklist functionality.
+                <br>
+                <br>
+                Within our scope of work, we focused on establishing the checklist creation process. 
+                This involved ensuring that administrators and lecturers, excluding students, 
+                could generate checklists and access analytical insights derived from checklist outcomes. 
+                Conversely, students were provided with the capability to respond to the checklists and offer comments on the thematic or content aspects. 
+                These comments were intended for use by the administrative team in order to improve the overall effectiveness of the checklists.
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/zsmhlubi/SS_App"> Student Survey and Support App</a>     
+            </p>
+            <img src="./Project Pictures/SS.png" alt="student survey and support app(checklist)" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+        
+        <h2>Wits Academy</h2>
+        <div class="icon">
+            <div class="big-icon-pace">
+                <img src="https://tabnine.com/blog/wp-content/uploads/2019/10/a9326d72465217.5be8ae1c0a8a7.png" alt="Android Studio" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="PHP" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png" alt="MySql" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://cdn.worldvectorlogo.com/logos/xampp.svg" alt="XAMPP" width="70px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://130e178e8f8ba617604b-8aedd782b7d22cfe0d1146da69a52436.ssl.cf1.rackcdn.com/attack-on-codecov-affects-customers-showcase_image-3-a-16420.jpg" alt="CodeCov" width="100px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <div class="big-icon-pace">
+                <img src="https://logowik.com/content/uploads/images/circleci8026.jpg" alt="CircleCI" width="70px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="GitHub" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="HTML" width="70px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png" alt="CSS" width="70px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                This initiative served as a means of establishing an online educational platform, 
+                facilitating the acquisition of diverse courses by students and providing individuals with the capability to share the instructional content they wish to disseminate.
+                <br>
+                <br>
+                Our team was assigned the task of developing both a mobile and web application for this purpose. 
+                The primary objective was to enable instructors to upload course materials, 
+                while concurrently allowing students to access and study these resources. 
+                Additional functionalities were incorporated into the application to enable features such as announcements, user profiles, and more.
+                <br>
+                <br>
+                Throughout the course of this project, 
+                we employed black box testing techniques to enhance our comprehension of software development. 
+                This strategic testing approach proved instrumental in refining our understanding of the intricacies involved in the development process.
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/JayMphek18/Wits-Academy/tree/main"> Wits Academy</a>            
+            </p>
+            <img src="./Project Pictures/wa.png" alt="wits academy(mobile)" width="15%" height="60%" class="image-padding"/>
+            <img src="./Project Pictures/wa_t.png" alt="wits academy(web app)" width="15%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+
+        <h2>Charity App</h2>
+        <div class="icon">
+            <div class="big-icon-pace">
+                <img src="https://tabnine.com/blog/wp-content/uploads/2019/10/a9326d72465217.5be8ae1c0a8a7.png" alt="Android Studio" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="PHP" width="100px" height="70px"/>
+            </div>
+            <div class="big-icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png" alt="MySql" width="100px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">   
+                This application was designed to facilitate the process of enabling users to make donations and receive contributions from other users within the application.
+                <br>
+                <br>
+                My team was assigned the task of developing a mobile application that performs the aforementioned functions. 
+                The application allows individuals to input details about the products they wish to donate, specifying the quantity or amount of the product. 
+                In this manner, the application serves as a conduit, connecting individuals who wish to provide assistance with those in need. 
+                Users have the capability to both accept and contribute donations, 
+                with additional features implemented to enhance user-friendliness and ease of comprehension.
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/zsmhlubi/charity">Charity App</a>             
+            </p>
+            <img src="./Project Pictures/charity.png" alt="Charity" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+    
+        <h2>Parallel Programming</h2>
+        <div class="icon">
+            <div class="icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png" alt="C programming" width="65px" height="70px"/>
+            </div>
+            
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                I was tasked with developing a program to implement the parallel scan algorithm and a Parallel Graph Algorithm, 
+                specifically Dijkstra’s Single Source Shortest Path (SSSP) Algorithm. For both algorithms, 
+                I was required to implement both a serial processing algorithm and a parallel processing algorithm. 
+                In the case of parallel processing, I employed OpenMP. Additionally, 
+                I created another parallel algorithm using MPI to optimize the runtime of the algorithms that were initially executed in series.
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/zsmhlubi/parallel_"> Parallel Programming</a> 
+            </p>
+            <img src="./Project Pictures/pp.png" alt="Parallel programming" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+
+        <h2>Shell Project</h2>
+        <div class="icon">
+            <div class="icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png" alt="C programming" width="65px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                The shell is designed to function in the following fundamental manner: upon entering a command in response to its prompt, 
+                the shell initiates the creation of a child process responsible for executing the entered command. 
+                Subsequently, upon completion of the command execution, the shell prompts the user for additional input. 
+                The shells I was tasked with to implemente will bear similarities to, albeit with greater simplicity than, the everyday Unix shell  
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/zsmhlubi/Operating-System-"> Shell Project</a>           
+            </p>
+            <img src="./Project Pictures/shell.png" alt="Shell Project" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+    
+        <h2>Classification Model</h2>
+        <div class="icon">
+            <div class="icon-pace">
+                <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" alt="Python" width="100px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" alt="jupyter notebook" width="70px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                On this project, 
+                our primary objective was to train a model for the classification of data. 
+                The task involved making predictions to assign appropriate labels to each data row. To achieve this, 
+                we utilized a set of testing data to train our model, with the aim of optimizing its predictive accuracy.
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/makavelli3145/ML-project-2023/tree/main"> Classification Model</a> 
+            </p>
+            <img src="./Project Pictures/ml.png" alt="Classification Model" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+
+        <h2>Snake AI</h2>
+        <div class="icon">
+            <div class="big-icon-pace">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java" width="100px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                this was a project to create a snake ai that will be used to play a snake game against other snakes of other players,
+                with this project i used BFS and DFS to find the best path for my snake ai 
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/zsmhlubi/SnakeAI"> Snake AI</a> 
+            </p>
+            <img src="./Project Pictures/AI.png" alt="Snake AI" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+        <hr style="width:90%">
+
+        <h2>3D Game</h2>
+        <div class="icon">
+            <div class="icon-pace">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/logo-javascript-logo-black-and-white.png" alt="JavaScript" width="70px" height="70px"/>
+            </div>
+            <div class="icon-pace">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" alt="ThreeJS" width="70px" height="70px"/>
+            </div>
+        </div>
+        <div class="icon">
+            <p class="paragraph">
+                On this project, 
+                our primary objective was build a function 3D game where we ended up picking a zombie shooting game, 
+                in this game we had features in which each member of the team had to do and i was responsible for the map and the physics of the game itself, 
+                also did the enemy/zombie controllers that dectate the zombies path to find and attack the player of the game 
+                <br>
+                <br>
+                GitHub link :  <a href="https://github.com/kagiso007/Game_Surfers/tree/main"> 3D Game</a> 
+            </p>
+            <img src="./Project Pictures/Game.png" alt="zombies shooting game" width="20%" height="60%" class="image-padding"/>
+        </div>
+
+    </div>
+
+
+    <!-- Third Section -->
+    <div class="section3" id="section3">
+        <h1>Contact</h1>
+        <div class="details-container">
+            <h4>Phone : </h4>
+            <p style="padding: 5px;"> +27 73 725 5572</p>
+        </div>
+        <div class="details-container">
+            <h4>Email : </h4>
+            <p style="padding: 5px;"><a href="mailto:z.s.m.hlubi@gmail.com">z.s.m.hlubi@gmail.com</a></p>
+        </div>
+        <div class="details-container">
+            <a href="https://www.linkedin.com/in/zenzele-hlubi-185a92232/">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-512x512-cvyrro5n.png" alt="LinkedIn icon" width="50px" height="50px">
+            </a>
+        </div>
+        <div class="details-container">
+            <p>
+                <br>
+                I look forward to hear from you and thank you
+                <br>
+            </p>
+        </div>
+    </div>
+    
+
+</body>
+</html>
